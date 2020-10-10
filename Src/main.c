@@ -39,7 +39,7 @@
  * -- added crawler mode settings
  */
 
-
+#include <stdint.h>
 #include "main.h"
 
 #include "targets.h"
@@ -814,7 +814,7 @@ int main(void)
 
   if(crawler_mode){
   	throttle_max_at_low_rpm = 1000;
-  	throttle_ranges_adjustment = 1;
+  	//throttle_ranges_adjustment = 1;
   	bi_direction = 1;
   	use_sin_start = 1;
   	low_rpm_throttle_limit = 1;
