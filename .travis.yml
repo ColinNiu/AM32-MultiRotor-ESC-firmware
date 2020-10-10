@@ -4,7 +4,7 @@ os:
 dist: bionic
 
 language: c
-compiler: gcc
+compiler: arm-none-eabi-gcc
 
 before_install:
   - sudo apt-get update
