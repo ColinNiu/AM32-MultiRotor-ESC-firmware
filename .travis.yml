@@ -4,7 +4,7 @@ os:
 dist: bionic
 
 language: c
-compiler: clang
+compiler: gcc
 
 before_install:
   - sudo apt-get update
