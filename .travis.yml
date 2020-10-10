@@ -8,7 +8,7 @@ compiler: arm-none-eabi-gcc
 
 before_install:
   - mkdir -p downloads tools
-  - wget -o downloads/gcc-arm.tar.bz2 https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
+  - wget -O downloads/gcc-arm.tar.bz2 https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
   - tar -xjf downloads/gcc-arm.tar.bz2 -C tools
   - export PATH=$PATH:`pwd`/tools/gcc-arm-none-eabi-9-2020-q2-update/bin
 
