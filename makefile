@@ -1,6 +1,6 @@
 CC := arm-none-eabi-gcc
 CFLAGS :=  -std=gnu99 -g -O2 -Wall -mlittle-endian -mthumb -mthumb-interwork -mcpu=cortex-m0 \
-	-fsingle-precision-constant -Wdouble-promotion
+	-fsingle-precision-constant -ffreestanding -Wdouble-promotion
 LDFLAGS := -TSTM32F051K6TX_FLASH.ld --specs=nosys.specs
 MAIN_SRC_DIR := Src
 SRC_DIR := Startup \
