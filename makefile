@@ -6,10 +6,8 @@ MAIN_SRC_DIR := Src
 SRC_DIR := Startup \
 	Src \
 	Drivers/STM32F0xx_HAL_Driver/Src
-SRC := $(foreach dir,$(SRC_DIR),$(wildcard $(dir)/*.c))
-OBJ := $(SRC:%.c=%.o)
-MAIN_SRC := $(foreach dir,$(MAIN_SRC_DIR),$(wildcard $(dir)/*.c))
-MAIN_OBJ := $(MAIN_SRC:%.c=%.o)
+SRC := $(foreach dir,$(SRC_DIR),$(wildcard $(dir)/*.[cs]))
+OBJ := $(SRC:%.[cs]=%.o)
 INCLUDES := -IInc \
 	-IDrivers/STM32F0xx_HAL_Driver/Inc \
 	-IDrivers/CMSIS/Include \
