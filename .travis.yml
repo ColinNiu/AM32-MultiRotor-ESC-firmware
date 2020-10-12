@@ -24,3 +24,12 @@ cache:
   directories:
   - downloads
   - tools
+
+deploy:
+  provider: releases
+  api_key:
+    secure: XFV0ryTtIM8UVoF6Sd42nV0TOiD/kSh7M7heo7aCwF1etU0iAWEGXHmFXuAQrvIM/PUiXeE/R9L6+T2jvdlfK6S8fLec2raI5CPtfvVBa1TwBMTJuO86Qj0Qq4+upakiKWlunrH3svVlu3KuI2CiqldDTX5bc++wjOY1qdcuVbAzv3EKAA3d1s69pfWDLiGXWuMktcYkTOhOrcAO45D9SzDkTyk9jaMf/t7QOZE3QORGQqnVmvECvk0YYYSuQ+xefj9FCL74sjifQb7c31yccQh4xBfr/NADWmwB1c1szcabfibH5H/HKXUwaYwsbpDbDd7bIy7ZQ/OiDFTCoy1Le6/mJVyuA8HJKSWIMQvyz/4eeW9dWv1iDSDqGW9LT2MFZ0XRVsP7G0v2/8TFyE2pRuia0zeG358vzhTYid2Z0IME435WSm0iyDzWtiJR4Q2t7Qjd2DHGQnEc4jDN0qfc/+R9d7pg0UIScC7FEoHs2RWtADTGTD6Vuk5xEuldTklXeNkvAyJ/8lG6PcjC8Hpi8X2BUtNPkkx+7c9yDoRZGh4LiyZn7ZwjjpQo7vXC3keZw1j0PgDFmyfLbWTEC4fHxpxl2oDz/wcgXQWM47BrIGozZ1DGe9Egm4qi5pxhOZn+sG62HUTujpH75Mw5VuGY7txVqbNTKCOSbrEeqX4fuxk=
+  file: *.bin
+  skip_cleanup: true
+  on:
+    tags: true
