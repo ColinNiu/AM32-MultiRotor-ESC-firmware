@@ -5,8 +5,8 @@ language: c
 compiler: arm-none-eabi-gcc
 before_install:
 - mkdir -p downloads tools
-- wget -O downloads/gcc-arm.tar.bz2 https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2
-- tar -xjf downloads/gcc-arm.tar.bz2 -C tools
+- if [ ! -f downloads/gcc-arm.tar.bz2 ];then wget -O downloads/gcc-arm.tar.bz2 https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2; fi
+- if [ ! -e tools/gcc-arm-none-eabi-9-2020-q2-update/bin ];then tar -xjf downloads/gcc-arm.tar.bz2 -C tools; fi
 - export PATH=$PATH:`pwd`/tools/gcc-arm-none-eabi-9-2020-q2-update/bin
 install: 
 before_script:
